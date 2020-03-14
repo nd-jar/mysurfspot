@@ -22,10 +22,16 @@ class MessageHandlerImpl(
     }
 
     private fun getForecastMessage(): String {
-        val forecast = forecastClient.forecast();
+        val campId = 922
+        val campName = "Mirissa"
+        val forecast = forecastClient.forecast(campId);
 
         log.debug("Received forecast from api: ", forecast);
-        return forecast[0].charts.period
+        val absMinBreakingHeight = forecast[0].swell.absMinBreakingHeight;
+        val absMaxBreakingHeight = forecast[0].swell.absMaxBreakingHeight;
+
+
+        return "Waves: $absMinBreakingHeight-$absMaxBreakingHeight! Good time for surf in $campName"
     }
 
     private fun getStartMessage(): String {

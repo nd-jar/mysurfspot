@@ -31,6 +31,7 @@ class MessageHandlerImplTest(@Autowired
     @Test
     fun handleForecast() {
         val response = handler.handle("/forecast")
+        println(response)
         assertThat(response).isNotNull()
     }
 
