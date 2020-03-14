@@ -1,4 +1,4 @@
-package jar.n.mysurfspot.bot.telegram
+package jar.n.mysurfspot.bot.handler
 
 
 interface MessageHandler {

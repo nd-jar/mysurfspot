@@ -1,4 +1,4 @@
-package jar.n.mysurfspot.bot.telegram
+package jar.n.mysurfspot.forecast.model
 
 import org.springframework.cloud.openfeign.FeignClient
 import org.springframework.web.bind.annotation.RequestMapping
@@ -8,5 +8,5 @@ import org.springframework.web.bind.annotation.RequestMethod
 interface ForecastClient {
 
     @RequestMapping(method = [RequestMethod.GET])
-    fun forecast(): String
+    fun forecast(): List<Forecast>
 }

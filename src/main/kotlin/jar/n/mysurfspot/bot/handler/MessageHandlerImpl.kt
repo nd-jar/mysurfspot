@@ -1,5 +1,6 @@
-package jar.n.mysurfspot.bot.telegram
+package jar.n.mysurfspot.bot.handler
 
+import jar.n.mysurfspot.forecast.model.ForecastClient
 import org.slf4j.LoggerFactory
 import org.springframework.stereotype.Service
 
@@ -22,8 +23,9 @@ class MessageHandlerImpl(
 
     private fun getForecastMessage(): String {
         val forecast = forecastClient.forecast();
+
         log.debug("Received forecast from api: ", forecast);
-        return forecast.substring(1..20)
+        return forecast[0].charts.period
     }
 
     private fun getStartMessage(): String {

@@ -1,5 +1,6 @@
 package jar.n.mysurfspot.bot.telegram
 
+import jar.n.mysurfspot.bot.handler.MessageHandler
 import org.slf4j.LoggerFactory
 import org.springframework.beans.factory.annotation.Value
 import org.springframework.scheduling.annotation.Scheduled

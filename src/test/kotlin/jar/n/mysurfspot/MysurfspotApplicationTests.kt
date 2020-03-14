@@ -1,13 +1,14 @@
 package jar.n.mysurfspot
 
-import org.junit.jupiter.api.Test
 import org.springframework.boot.test.context.SpringBootTest
 
-@SpringBootTest
+
+//@RunWith(MockitoJUnitRunner::class)
+@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 class MysurfspotApplicationTests {
 
-    @Test
-    fun contextLoads() {
+    @org.junit.Test
+    public fun contextLoads() {
     }
 
 }
